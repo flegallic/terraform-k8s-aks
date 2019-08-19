@@ -37,7 +37,10 @@ bash-4.4# export KUBECONFIG=/root/.kube/config \
 bash-4.4# kubectl config get-clusters \
 bash-4.4# kubectl config get-contexts \
 bash-4.4# kubectl get nodes \
-bash-4.4# kubectl get service
+bash-4.4# kubectl get service \
+bash-4.4# \
+bash-4.4# kubectl apply -f https://k8s.io/examples/application/deployment.yaml \
+bash-4.4# kubectl get pods -l app=nginx
 
 ## Help
 Install terraform         = https://learn.hashicorp.com/terraform/getting-started/install.html \
