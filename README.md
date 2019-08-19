@@ -34,7 +34,10 @@ bash-4.4# az aks list  \
 bash-4.4# az aks show --resource-group k8saks-ResourceGroup --name k8saks \
 bash-4.4# az aks get-credentials --resource-group k8saks-ResourceGroup --name k8saks --output yaml \
 bash-4.4# export KUBECONFIG=/root/.kube/config \
-bash-4.4# kubectl get nodes
+bash-4.4# kubectl config get-clusters \
+bash-4.4# kubectl config get-contexts \
+bash-4.4# kubectl get nodes \
+bash-4.4# kubectl get service
 
 ## Help
 Install terraform         = https://learn.hashicorp.com/terraform/getting-started/install.html \
