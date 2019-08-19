@@ -2,16 +2,16 @@
 Create a Kubernetes cluster using Terraform and AKS.
 
 ### Run container Azure cli
-~$ docker images mcr.microsoft.com/azure-cli:latest
-~$ docker run -it mcr.microsoft.com/azure-cli
+~$ docker images mcr.microsoft.com/azure-cli:latest \
+~$ docker run -it mcr.microsoft.com/azure-cli \
 
 ### On container Azure cli
 Install kubectl*
 
 bash-4.4# az aks list
-bash-4.4# az aks show --resource-group k8saks-ResourceGroup --name k8saks
-bash-4.4# az aks get-credentials --resource-group k8saks-ResourceGroup --name k8saks --output yaml
-bash-4.4# export KUBECONFIG=/root/.kube/config
+bash-4.4# az aks show --resource-group k8saks-ResourceGroup --name k8saks \
+bash-4.4# az aks get-credentials --resource-group k8saks-ResourceGroup --name k8saks --output yaml \
+bash-4.4# export KUBECONFIG=/root/.kube/config \
 bash-4.4# kubectl get nodes
 
 ### Help
