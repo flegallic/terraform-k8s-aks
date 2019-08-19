@@ -28,7 +28,7 @@ bash-4.4# chmod +x ./kubectl \
 bash-4.4# mv ./kubectl /usr/local/bin/kubectl \
 bash-4.4# kubectl version \
 bash-4.4# \
-bash-4.4# az storage container create -n tfstate --account-name <YourAzureStorageAccountName> --account-key <YourAzureStorageAccountKey> \
+bash-4.4# az storage container create -n tfstate --account-name "YourAzureStorageAccountName" --account-key "YourAzureStorageAccountKey" \
 bash-4.4# az login  \
 bash-4.4# az aks list  \
 bash-4.4# az aks show --resource-group k8saks-ResourceGroup --name k8saks \
