@@ -9,6 +9,7 @@ Create a Kubernetes cluster using Terraform and AKS.
 install terraform -> https://learn.hashicorp.com/terraform/getting-started/install.html
 
 ## Manage K8S cluster
+- Run commands
 bash-4.4# curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl \
 bash-4.4# chmod +x ./kubectl \
 bash-4.4# mv ./kubectl /usr/local/bin/kubectl \
