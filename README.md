@@ -1,11 +1,14 @@
 # terraform-k8s-aks
 Create a Kubernetes cluster using Terraform and AKS.
 
-### Run container Azure cli
+### Run container with Docker
 ~$ docker images mcr.microsoft.com/azure-cli:latest \
 ~$ docker run -it mcr.microsoft.com/azure-cli
 
-### On container Azure cli
+### Create K8S cluster
+
+
+### Manage K8S cluster
 bash-4.4# curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl \
 bash-4.4# chmod +x ./kubectl \
 bash-4.4# mv ./kubectl /usr/local/bin/kubectl \
