@@ -2,8 +2,8 @@
 Create a Kubernetes cluster using Terraform and AKS.
 
 ### Run container Azure cli
-docker images mcr.microsoft.com/azure-cli:latest
-docker run -it mcr.microsoft.com/azure-cli
+~$ docker images mcr.microsoft.com/azure-cli:latest
+~$ docker run -it mcr.microsoft.com/azure-cli
 
 ### On container Azure cli
 Install kubectl*
