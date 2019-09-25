@@ -40,6 +40,7 @@ bash-4.4# kubectl get nodes \
 bash-4.4# kubectl get service \
 bash-4.4# \
 bash-4.4# kubectl apply -f https://k8s.io/examples/application/deployment.yaml \
+bash-4.4# kubectl get deployment \
 bash-4.4# kubectl get pods -l app=nginx
 
 ## Help
