@@ -43,6 +43,10 @@ bash-4.4# kubectl get pods -l app=nginx \
 bash-4.4# kubectl expose deployment {{your-nginx-pods}} --port=80 --type=LoadBalancer \
 bash-4.4# kubectl get service
 
+## Connect to nginx
+- go to Azure environment : All services -> Public IP addresses -> kubernetes-{{id}} -> Overview -> {{your-IP Address}}
+- go to http://{{your-IP Address}}
+
 ## Help
 Install terraform         = https://learn.hashicorp.com/terraform/getting-started/install.html \
 Install docker            = https://docs.docker.com/install/ \
