@@ -47,6 +47,10 @@ bash-4.4# kubectl get service
 - go to Azure environment : All services -> Public IP addresses -> kubernetes-{{id}} -> Overview -> {{your-IP Address}}
 - go to http://{{your-IP Address}}
 
+## Create K8S cluster
+- run command : \
+~$ ./removeK8sCluster.sh
+
 ## Help
 Install terraform         = https://learn.hashicorp.com/terraform/getting-started/install.html \
 Install docker            = https://docs.docker.com/install/ \
