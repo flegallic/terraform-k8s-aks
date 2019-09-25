@@ -47,7 +47,7 @@ bash-4.4# kubectl get service
 - go to Azure environment : All services -> Public IP addresses -> kubernetes-{{id}} -> Overview -> {{your-IP Address}}
 - go to http://{{your-IP Address}}
 
-## Create K8S cluster
+## Remove K8S cluster
 - run command : \
 ~$ ./removeK8sCluster.sh
 
