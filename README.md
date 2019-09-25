@@ -44,6 +44,7 @@ bash-4.4# kubectl get pods -l app=nginx
 
 ## Help
 Install terraform         = https://learn.hashicorp.com/terraform/getting-started/install.html \
+Install docker            = https://docs.docker.com/install/ \
 Install kubectl           = https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux \
 Create K8S cluster on AKS = https://docs.microsoft.com/fr-fr/azure/terraform/terraform-create-k8s-cluster-with-tf-and-aks \
 AKS command line          = https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-scale
