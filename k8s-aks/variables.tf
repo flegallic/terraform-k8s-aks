@@ -1,3 +1,4 @@
+variable "env" {}
 variable "subscription_id" {description = "The Microsoft Azure Provider"}
 variable "client_id" {description = "The Microsoft Azure Provider"}
 variable "client_secret" {description = "The Microsoft Azure Provider"}
