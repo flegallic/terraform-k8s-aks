@@ -10,6 +10,13 @@ resource "azurerm_resource_group" "k8s" {
     location = "${var.location}"
 }
 
+resource "random_string" "fqdn" {
+ length  = 6
+ special = false
+ upper   = false
+ number  = false
+}
+
 resource "azurerm_public_ip" "public_ip" {
  name                         = "${var.env}-public-ip"
  location                     = "${var.location}"
