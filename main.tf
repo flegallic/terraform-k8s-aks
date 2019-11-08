@@ -1,5 +1,5 @@
 module "k8s-aks" {
-    #env                                 = "k8s-aks"
+    env                                 = "k8s-aks"
     source                              = "./k8s-aks"
     subscription_id                     = "${var.subscription_id}"
     client_id                           = "${var.client_id}"
