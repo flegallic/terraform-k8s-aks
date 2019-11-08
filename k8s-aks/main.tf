@@ -16,7 +16,6 @@ resource "azurerm_public_ip" "public_ip" {
  resource_group_name          = "${azurerm_resource_group.resource_group.name}"
  allocation_method = "Static"
  domain_name_label            = "${random_string.fqdn.result}"
- tags                         = "${var.tags}"
 }
 
 resource "azurerm_log_analytics_workspace" "test" {
