@@ -26,3 +26,7 @@ output "k8s-aks kube_config" {
 output "host" {
     value = "${module.k8s-aks.host}"
 }
+
+output "FQDN of K8S" {
+  value = "${module.k8s-aks.public_ip}"
+}
