@@ -13,9 +13,9 @@ module "k8s-aks" {
     log_analytics_workspace_name        = "k8saks-LogAnalyticsWorkspaceName"
     log_analytics_workspace_location    = "eastus"
     log_analytics_workspace_sku         = "PerGB2018"
-    vm_size                             = "Standard_DS1_v2"
+    vm_size                             = "Standard_B1S"
     os_type                             = "Linux"
-    os_disk_size_gb                     = "30"
+    os_disk_size_gb                     = "9"
     admin_username                      = "ubuntu"
     ssh_public_key                      = "~/.ssh/id_rsa.pub"
 }
