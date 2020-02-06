@@ -51,10 +51,10 @@ bash-5.0# kubectl get nodes -o wide
 #### Run a Debian container to create an SSH connection to an AKS node
 bash-5.0# kubectl run --generator=run-pod/v1 -it --rm aks-ssh --image=debian
 #### On the container
-apt-get update && apt-get install openssh-client vim -y
-vim .ssh/id_rsa (copy your private SSH key)
-kubectl cp ~/.ssh/id_rsa $(kubectl get pod -l run=aks-ssh -o jsonpath='{.items[0].metadata.name}'):/id_rsa
-chmod 0600 id_rsa
+apt-get update && apt-get install openssh-client vim -y  \
+vim .ssh/id_rsa (copy your private SSH key)  \
+kubectl cp ~/.ssh/id_rsa $(kubectl get pod -l run=aks-ssh -o jsonpath='{.items[0].metadata.name}'):/id_rsa  \
+chmod 0600 id_rsa  \
 ssh -i id_rsa azureuser@IP_NODE
 #### Connect on your Node
 ubuntu@aks-agentpool-24072430-0:~$
