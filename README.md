@@ -5,6 +5,7 @@ Create a Kubernetes cluster using Terraform and AKS.
 - Azure subscription
 - Azure service principal
 - Azure storage
+- B2s is a minimum AKS instance to create a kubernetes cluster on Azure
 - Docker
 - Terraform
 
