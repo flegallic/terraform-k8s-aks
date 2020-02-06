@@ -13,13 +13,15 @@ Create a Kubernetes cluster using Terraform and AKS.
 git clone git@github.com:haxware/terraform-k8s-aks.git
 #### add your Azure account subscription
 terraform-k8s-aks/secret.tf
-#### run script on local machine
+#### SSH Key
+check your private key (id_rsa and id_rsa.pub)
+#### run script on your local machine
 . createK8sCluster.sh
 
 ## Manage your K8S cluster
-#### Run an azure-cli container
-~$ docker images mcr.microsoft.com/azure-cli:latest \
-~$ docker run -it mcr.microsoft.com/azure-cli
+#### Run an azure-cli container on local machine
+docker images mcr.microsoft.com/azure-cli:latest \
+docker run -it mcr.microsoft.com/azure-cli
 #### On the container
 bash-5.0# curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl \
 bash-5.0# chmod +x ./kubectl \
