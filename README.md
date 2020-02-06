@@ -8,8 +8,6 @@ Create a Kubernetes cluster using Terraform and AKS.
 - Docker
 - Terraform
 
-
-
 ## Create K8S cluster
 1) clone repository
 2) add your Azure account subscription (secret.tf)
@@ -48,16 +46,16 @@ bash-5.0# kubectl get service
 - go to http://{{your-IP Address}}
 
 ## Connect on your Nodes
-Check internal IP addresses of all the nodes in the cluster >>
+Check internal IP addresses of all the nodes in the cluster >>  \
 bash-5.0# kubectl get nodes -o wide \
-Run a Debian container to create an SSH connection to an AKS node >>
+Run a Debian container to create an SSH connection to an AKS node >>  \
 bash-5.0# kubectl run --generator=run-pod/v1 -it --rm aks-ssh --image=debian \
-On the container >>
-root@aks-ssh:/# apt-get update && apt-get install openssh-client vim -y
-root@aks-ssh:/# vim .ssh/id_rsa (copy your private SSH key)
-root@aks-ssh:/# kubectl cp ~/.ssh/id_rsa $(kubectl get pod -l run=aks-ssh -o jsonpath='{.items[0].metadata.name}'):/id_rsa
-root@aks-ssh:/# chmod 0600 id_rsa
-root@aks-ssh:/# ssh -i id_rsa azureuser@IP_NODE
+On the container >>  \
+root@aks-ssh:/# apt-get update && apt-get install openssh-client vim -y  \
+root@aks-ssh:/# vim .ssh/id_rsa (copy your private SSH key)  \
+root@aks-ssh:/# kubectl cp ~/.ssh/id_rsa $(kubectl get pod -l run=aks-ssh -o jsonpath='{.items[0].metadata.name}'):/id_rsa  \
+root@aks-ssh:/# chmod 0600 id_rsa  \
+root@aks-ssh:/# ssh -i id_rsa azureuser@IP_NODE  \
 ubuntu@aks-agentpool-24072430-0:~$
 
 ## Remove K8S cluster
