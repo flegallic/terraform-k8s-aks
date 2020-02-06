@@ -9,11 +9,12 @@ Create a Kubernetes cluster using Terraform and AKS.
 - Terraform
 
 ## Create a K8S cluster
-1) clone repository
-2) add your Azure account subscription (secret.tf)
-3) run commands : \
-~$ cd terraform-k8s-aks  \
-~$ . createK8sCluster.sh
+#### clone repository
+git clone git@github.com:haxware/terraform-k8s-aks.git
+#### add your Azure account subscription
+terraform-k8s-aks/secret.tf
+#### run script on local machine
+. createK8sCluster.sh
 
 ## Manage your K8S cluster
 #### Run an azure-cli container
@@ -59,8 +60,8 @@ ssh -i id_rsa azureuser@IP_NODE
 ubuntu@aks-agentpool-24072430-0:~$
 
 ## Remove a K8S cluster
-- run command : \
-~$ . removeK8sCluster.sh
+#### run script on local machine
+. removeK8sCluster.sh
 
 ## Help
 Install terraform         = https://learn.hashicorp.com/terraform/getting-started/install.html \
