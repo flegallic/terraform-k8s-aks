@@ -36,16 +36,7 @@ bash-5.0# az aks get-credentials --resource-group k8saks-ResourceGroup --name k8
 bash-5.0# export KUBECONFIG=/root/.kube/config \
 bash-5.0# kubectl config get-clusters \
 bash-5.0# kubectl config get-contexts \
-bash-5.0# kubectl get nodes \
-bash-5.0# kubectl apply -f https://k8s.io/examples/application/deployment.yaml \
-bash-5.0# kubectl get deployment \
-bash-5.0# kubectl get pods -l app=nginx \
-bash-5.0# kubectl expose deployment {{your-nginx-pods}} --port=80 --type=LoadBalancer \
-bash-5.0# kubectl get service
-
-## Connect to nginx
-- go to Azure environment : All services -> Public IP addresses -> kubernetes-{{id}} -> Overview -> {{your-IP Address}}
-- go to http://{{your-IP Address}}
+bash-5.0# kubectl get nodes
 
 ## Connect with SSH to Azure Kubernetes Service
 #### Check internal IP addresses of all the nodes in the cluster
@@ -59,11 +50,23 @@ kubectl cp ~/.ssh/id_rsa $(kubectl get pod -l run=aks-ssh -o jsonpath='{.items[0
 chmod 0600 id_rsa  \
 ssh -i id_rsa azureuser@IP_NODE
 #### Connect on your Node
-ubuntu@aks-agentpool-24072430-0:~$
+ubuntu@aks-agentpool-24072430-0:~$ \
+
+## Deploy a nginx service
+#### On the container
+bash-5.0# kubectl apply -f https://k8s.io/examples/application/deployment.yaml \
+bash-5.0# kubectl get deployment \
+bash-5.0# kubectl get pods -l app=nginx \
+bash-5.0# kubectl expose deployment {{your-nginx-pods}} --port=80 --type=LoadBalancer \
+bash-5.0# kubectl get service
+#### Azure environment
+All services -> Public IP addresses -> kubernetes-{{id}} -> Overview -> {{your-IP Address}}
+#### Connect to nginx
+http://{{your-IP Address}} \
 
 ## Remove a K8S cluster
 #### run script on local machine
-. removeK8sCluster.sh
+. removeK8sCluster.sh \
 
 ## Help
 Install terraform         = https://learn.hashicorp.com/terraform/getting-started/install.html \
