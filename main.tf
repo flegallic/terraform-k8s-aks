@@ -6,7 +6,7 @@ module "k8s-aks" {
     client_secret                       = "${var.client_secret}"
     tenant_id                           = "${var.tenant_id}"
     location                            = "eastus"
-    agent_count                         = 5
+    agent_count                         = 3
     dns_prefix                          = "k8saks"
     cluster_name                        = "k8saks"
     resource_group_name                 = "k8saks-ResourceGroup"
