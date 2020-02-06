@@ -54,7 +54,7 @@ On the container >>
 root@aks-ssh:/# apt-get update && apt-get install openssh-client vim -y  \
 root@aks-ssh:/# vim .ssh/id_rsa (copy your private SSH key)  \
 - root@aks-ssh:/# kubectl cp ~/.ssh/id_rsa $(kubectl get pod -l run=aks-ssh -o jsonpath='{.items[0].metadata.name}'):/id_rsa  \
-- root@aks-ssh:/# chmod 0600 id_rsa  \
+root@aks-ssh:/# chmod 0600 id_rsa  \
 root@aks-ssh:/# ssh -i id_rsa azureuser@IP_NODE  \
 ubuntu@aks-agentpool-24072430-0:~$
 
