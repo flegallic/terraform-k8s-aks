@@ -52,7 +52,7 @@ ssh -i id_rsa azureuser@IP_NODE
 #### Connect on your Node
 ubuntu@aks-agentpool-24072430-0:~$ \
 
-## Deploy a nginx service
+## nginx deployment
 #### On the container
 bash-5.0# kubectl apply -f https://k8s.io/examples/application/deployment.yaml \
 bash-5.0# kubectl get deployment \
