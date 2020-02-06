@@ -15,7 +15,7 @@ Create a Kubernetes cluster using Terraform and AKS.
 2) add your Azure account subscription (secret.tf)
 3) run commands : \
 ~$ cd terraform-k8s-aks  \
-~$ ./createK8sCluster.sh
+~$ . createK8sCluster.sh
 
 ## Run container with Docker
 ~$ docker images mcr.microsoft.com/azure-cli:latest \
@@ -49,7 +49,7 @@ bash-4.4# kubectl get service
 
 ## Remove K8S cluster
 - run command : \
-~$ ./removeK8sCluster.sh
+~$ . removeK8sCluster.sh
 
 ## Help
 Install terraform         = https://learn.hashicorp.com/terraform/getting-started/install.html \
