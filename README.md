@@ -46,9 +46,9 @@ bash-5.0# kubectl get service
 - go to http://{{your-IP Address}}
 
 ## Connect on your Nodes
-Check internal IP addresses of all the nodes in the cluster >>  \
+### Check internal IP addresses of all the nodes in the cluster
 bash-5.0# kubectl get nodes -o wide \
-Run a Debian container to create an SSH connection to an AKS node >>  \
+### Run a Debian container to create an SSH connection to an AKS node
 bash-5.0# kubectl run --generator=run-pod/v1 -it --rm aks-ssh --image=debian \
 On the container :
 root@aks-ssh:/# apt-get update && apt-get install openssh-client vim -y  \
