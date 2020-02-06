@@ -50,7 +50,7 @@ kubectl cp ~/.ssh/id_rsa $(kubectl get pod -l run=aks-ssh -o jsonpath='{.items[0
 chmod 0600 id_rsa  \
 ssh -i id_rsa azureuser@IP_NODE
 #### Connect on your Node
-ubuntu@aks-agentpool-24072430-0:~$ \
+ubuntu@aks-agentpool-24072430-0:~$
 
 ## nginx deployment
 #### On the container
@@ -62,11 +62,11 @@ bash-5.0# kubectl get service
 #### Azure environment
 All services -> Public IP addresses -> kubernetes-{{id}} -> Overview -> {{your-IP Address}}
 #### Connect to nginx
-http://{{your-IP Address}} \
+http://{{your-IP Address}}
 
 ## Remove a K8S cluster
 #### run script on local machine
-. removeK8sCluster.sh \
+. removeK8sCluster.sh
 
 ## Help
 Install terraform         = https://learn.hashicorp.com/terraform/getting-started/install.html \
