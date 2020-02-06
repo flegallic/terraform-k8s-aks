@@ -8,7 +8,7 @@ Create a Kubernetes cluster using Terraform and AKS.
 - Docker
 - Terraform
 
-## Create K8S cluster
+## Create a K8S cluster
 1) clone repository
 2) add your Azure account subscription (secret.tf)
 3) run commands : \
@@ -18,7 +18,8 @@ Create a Kubernetes cluster using Terraform and AKS.
 ## Manage your K8S cluster
 #### Run an azure-cli container
 ~$ docker images mcr.microsoft.com/azure-cli:latest \
-~$ docker run -it mcr.microsoft.com/azure-cli \
+~$ docker run -it mcr.microsoft.com/azure-cli
+#### On the container
 bash-5.0# curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl \
 bash-5.0# chmod +x ./kubectl \
 bash-5.0# mv ./kubectl /usr/local/bin/kubectl \
@@ -57,7 +58,7 @@ ssh -i id_rsa azureuser@IP_NODE
 #### Connect on your Node
 ubuntu@aks-agentpool-24072430-0:~$
 
-## Remove K8S cluster
+## Remove a K8S cluster
 - run command : \
 ~$ . removeK8sCluster.sh
 
@@ -66,4 +67,5 @@ Install terraform         = https://learn.hashicorp.com/terraform/getting-starte
 Install docker            = https://docs.docker.com/install/ \
 Install kubectl           = https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux \
 Create K8S cluster on AKS = https://docs.microsoft.com/fr-fr/azure/terraform/terraform-create-k8s-cluster-with-tf-and-aks \
+SSH to AKS                = https://docs.microsoft.com/fr-fr/azure/aks/ssh \
 AKS command line          = https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-scale
